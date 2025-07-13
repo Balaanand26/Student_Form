@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student_Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-slate-400">
+
+    <div class="bg-blue-200 max-w-md mx-auto rounded-lg p-6 mb-8 mt-8" >
+      <h2 class="text-xl font-semibold text-center mb-4">STUDENT FORM</h2>
+      <form id="studentform" class="space-y-4">
+        <div>
+          <label for="name" class="block text-sm font-medium mb-2">Name</label>
+          <input type="text" id="name" placeholder="Enter your Name" required class="w-full border rounded px-3 py-2"/>
+        </div>
+        <div>
+          <label for="age" class="block text-sm font-medium mb-2">Age</label>
+          <input type="number" id="age" placeholder="Enter your " required class="w-full border rounded px-3 py-2"/>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Gender</label>
+          <label class="mr-4"><input type="radio" name="gender" value="Male" /> Male</label>
+          <label
+            ><input type="radio" name="gender" value="Female" /> Female</label>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Course</label>
+          <select name="course" id="course" class="w-full border rounded px-3 py-2">
+            <option value="Javascript">Javascript</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="PHP">PHP</option>
+            <option value="C++">C++</option>
+          </select>
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium mb-2">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your Email"
+            required 
+            class="w-full border rounded px-3 py-2"
+          />
+        </div>
+        <div class="text-center">
+          <button type="submit" class="bg-blue-500 text-white w-full py-3 text-lg rounded-xl hover:bg-blue-700 mt-4">Save</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="max-w-5xl mx-auto overflow-x-auto">
+      <h2 class="text-xl font-semibold text-center mb-4">STUDENT DETAILS</h2>
+      <table class="min-w-full bg-blue-200 border  rounded">
+        <thead class="bg-blue-600 text-white">
+          <tr>
+            <th class="px-4 py-2 border">NAME</th>
+            <th class="px-4 py-2 border">AGE</th>
+            <th class="px-4 py-2 border">COURSE</th>
+            <th class="px-4 py-2 border">GENDER</th>
+            <th class="px-4 py-2 border">EMAIL</th>
+            <th class="px-4 py-2 border">ACTION</th>
+          </tr>
+        </thead>
+        <tbody id="studenttableresult">
+
+        </tbody>
+      </table>
+    </div> 
+
+
+    <script src="index.js">
+      // const form = document.getElementById("studentform");
+      // const table = document.getElementById("studenttableresult");
+
+      // form.addEventListener("submit", function(event){
+      //   event.preventDefault();
+
+      //   const name = document.getElementById("name").value;
+      //   const age = document.getElementById("age").value;
+      //   const gender = document.querySelector('input[name="gender"]:checked').value;
+      //   const course = document.getElementById("course").value;
+      //   const email = document.getElementById("email").value;
+
+
+      //   const row = document.createElement("tr");
+      //   row.innerHTML =`
+      //   <td class="border px-4 py-2 text-center">${name}</td>
+      //   <td class="border px-4 py-2 text-center">${age}</td>
+      //   <td class="border px-4 py-2 text-center">${gender}</td>
+      //   <td class="border px-4 py-2 text-center">${course}</td>
+      //   <td class="border px-4 py-2 text-center">${email}</td>
+      //   <td class="text-center"><button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 delete-btn">Delete</button></td>`;
+
+      //   table.appendChild(row);
+      //   form.reset();
+      // })
+
+      // table.addEventListener("click",function(event){
+      //   if(event.target.classList.contains("delete-btn")){
+      //     event.target.closest("tr").remove();
+      //   }
+      // });
+    </script>
+  </body>
+</html>
